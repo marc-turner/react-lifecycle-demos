@@ -6,15 +6,15 @@ class Timer extends Component {
         this.state = { time: new Date() };
         console.log('In constructor');
     }
-    // componentDidMount() {
-    //     console.log('Component Did Mount');
-    //     this.timerID = setInterval(() => {
-    //         this.setState({ time: new Date() });
-    //     }, 1000);
+    componentDidMount() {
+        console.log('Component Did Mount');
+        this.timerID = setInterval(() => {
+            this.setState({ time: new Date() });
+        }, 1000);
     }
     render() {
         console.log('In Render');
-        return <div>{/* <h1>{this.state.time.getSeconds()}</h1> */}</div>;
+        return <div>{<h1>{this.state.time.getSeconds()}</h1>}</div>;
     }
 }
 
